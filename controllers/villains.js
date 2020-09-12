@@ -13,7 +13,8 @@ const getVillainsBySlug = async (req, res) => {
   return res.send(foundVillain);
 };
 
-const createNewVillain = (req, res) => {
+const createNewVillain = async (req, res) => {
+  console.log("starting to create new villan");
   const { name, movie, slug } = req.body;
   if (!name || !movie || !slug) {
     return res
@@ -23,12 +24,12 @@ const createNewVillain = (req, res) => {
       );
   }
 
-  const newVillain = models.villains.create({
+  const newVillain = await models.villains.create({
     name,
     movie,
     slug,
   });
-
+  console.log({ newVillain });
   return res.status(201).send(newVillain);
 };
 

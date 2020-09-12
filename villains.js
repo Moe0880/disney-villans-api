@@ -90,8 +90,8 @@ const villains = [
     slug: "ursula",
   },
 ];
-villains.forEach(({ name, movie, slug }) =>
-  console.log(`('${name}','${movie}','${slug}')`)
-);
+// villains.forEach(({ name, movie, slug }) =>
+//   console.log(`('${name}','${movie}','${slug}')`)
+// );
 
 module.exports = villains;
