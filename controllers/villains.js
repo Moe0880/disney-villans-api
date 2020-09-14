@@ -29,7 +29,7 @@ const createNewVillain = async (req, res) => {
     movie,
     slug,
   });
-  console.log({ newVillain });
+  //console.log({ newVillain });
   return res.status(201).send(newVillain);
 };
 
